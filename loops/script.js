@@ -21,14 +21,14 @@
 
 //ответ на 2 задачу
 
-let enteredNum = +prompt('enter number');
-let summ = 0;
-for (let i = 0 ;enteredNum >= i;i++){
-    summ = summ + i;
-    console.log(enteredNum);
+// let enteredNum = +prompt('enter number');
+// let summ = 0;
+// for (let i = 0 ;enteredNum >= i;i++){
+//     summ = summ + i;
+//     console.log(enteredNum);
     
-}
-console.log(summ);
+// }
+// console.log(summ);
 
 //2 ответ на 2 задачу
 
