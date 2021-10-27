@@ -22,24 +22,24 @@
 // sayHello('john', english) ===>>> 'Hello JOHN'
 // sayHello('john', italian) ===>>> 'Ciao JOHN'
 
-function italian (userName) {
-    console.log(`Ciao ${userName}`);
-}
+// function italian (userName) {
+//     console.log(`Ciao ${userName}`);
+// }
 
-function english (userName) {
-    console.log(`Hello ${userName}`);
-}
+// function english (userName) {
+//     console.log(`Hello ${userName}`);
+// }
 
-function russian (userName) {
-    console.log(`Привет ${userName}`);
-}
+// function russian (userName) {
+//     console.log(`Привет ${userName}`);
+// }
 
-function sayHello(userName, language) {
-    const upperUserName = userName.toUpperCase();
-    language(upperUserName);
-}
+// function sayHello(userName, language) {
+//     const upperUserName = userName.toUpperCase();
+//     language(upperUserName);
+// }
 
-sayHello('joHn', italian);
+// sayHello('joHn', italian);
 
 
 // function func (a, b) { // a = 20, b = function (10) {return 20}
@@ -82,3 +82,14 @@ sayHello('joHn', italian);
     //         return someFunc(n - 1);
     //     }
     // };
+
+function arr (){
+    
+    let k = 0;
+    for (let i = 0;arr.length;i++){
+        let sum =+ arr[i]
+        k++
+    }
+    return sum/k;
+}
+console.log(arr(1,9,9,9,9,9,9));
