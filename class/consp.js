@@ -1,51 +1,64 @@
-'use strict';
+//----------------------------sintacsiz------------------------
 
+// function Class(){
 
+// }
+// Class.prototype.classLine = function(){}
+// Class.console = function(){console.log('well done')} //статический метод класса Array.isArray(); тоже статический метод вызывать Class.console()
+// let classTeg = new Class();
 
-function Animal (name, age) {
-    // 1. this = {};    
-    this.age = age;
-    this.name = name;
-    // this.toString = function () {
-    //     return 'smth';
-    // };
-    // 2. return this;
+//---------------------------vazno------------------------------
+
+//instans это ребенок класса то что он производит
+
+//---------------------------nasledovanie-----------------------
+
+// 1 - sintacsiz) class Rabbit extends Animal{} чтобы класс Rabbit наследовал методы Animal 
+// Human.porototype = Object.create(Animal.prototype);
+// Human.prototype.constructor = Human ;чтобы Human наследовал методы Animal
+// 2 - vazno) наследование можно еще и использовать с функциями
+
+//|||||||||||||||||||||||||||example||||||||||||||||||||||||||||
+// function Animal(age, name){
+//     this.age = age;
+//     this.name = name;
+// }
+// Animal.prototype.run = function(){
+//     console.log(`${this.name} run`);
+// }
+// let dog = new Animal(34 , 'Shurik');
+
+// function Human (name, age, job){
+//     Animal.call(this, name, age);
+//     this.job = job;
+// }
+
+//-----------------------es6 classes------------------------
+
+class Animal{
+    constructor(name,age){
+        this.name = name;
+        this.age = age;
+    }
+    eat () {
+        return `${this.name} eats`
+    }
 }
+const dog = new Animal('Tuzik',5);
 
-Animal.prototype.run = function (where = 'itstep') {
-    console.log(`${this.name} runs to ${where}`);
-};
-
-Animal.prototype.toString = function () {
-    return this.name;
+class Human extends Animal{
+    constructor(job,...args){
+        super(...args);
+        this.job = job;
+    }
+    learn (technology){
+        return `${this.name} learns ${technology}`
+    }
+    eat(){
+        const eatAsAnimal = super.eat();
+        return eatAsAnimal + 'with a fork'
+    }
 }
-
-// Animal.prototype === obj.__proto__ === obj2.__proto__ === obj3.__proto__
-
-let obj = new Animal('Sharik', 10);
-let obj2 = new Animal('Bobik', 20);
-let obj3 = new Animal.prototype.constructor('Sobaka', 30);
-
-console.log(obj3.paws);
-
-
-// 1. Написать конструктор товара который принимает 3 параметра
-// название 
-// цвет
-// цена
-// Добавить в прототип классу метод showPrice ===>>> "товар ИМЯ стоит ЦЕНА"
-
-// 2. Создать класс Device у инстансов которого есть поле isON (boolean)
-// В прототипе класса Device создайте метод .switch() который переключает
-// поле инстанса в true/false при каждом вызове
-
-// 3. напишите программу которая вычисляет длину линий в стандартной
-//  двумерной системе координат. Координаты начала и конца линий 
-//  должны хранится в объектах. 
-//  а) Создайте три линии
-//  б) Вычислите их длины
-//  в) Проверьте могут ли три линии сформировать треугольник
-//  Длину линий можно найти по теореме Пифагора
-//  Три линии могут сформировать треугольник если длина каждой стороны 
-//  меньше суммы дву других сторон.
-
+const hum1 = new Human('bomj','Jhon',23);
+hum1.learn('js')
+hum1.eat()

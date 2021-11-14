@@ -329,3 +329,114 @@
 // });
 // let result = arrNew.flat();
 // console.log(result);
+//---------------------------------class-------------------------------------------
+// 1. напишите программу которая вычисляет длину линий в стандартной
+//  двумерной системе координат. Координаты начала и конца линий 
+//  должны хранится в объектах. 
+//  а) Создайте три линии
+//  б) Вычислите их длины
+//  в) Проверьте могут ли три линии сформировать треугольник
+//  Длину линий можно найти по теореме Пифагора
+//  Три линии могут сформировать треугольник если длина каждой стороны 
+//  меньше суммы дву других сторон
+
+// function LineLen () {
+// }
+// LineLen.prototype.len = function(line , line1 ,line2){
+//     let frLen = line.length
+//     let secLen = line1.length
+//     let thirdLen = line2.length
+//     if(frLen + secLen > thirdLen & secLen + thirdLen > frLen ){
+//         console.log('its wrong triangel')
+//     }else{console.log('its true triangel');}
+// }
+// let d = new LineLen('--- ','----','-----------------');
+// d.len()
+
+// 2. Создать конструктор Car, который принимает параметры
+// model, color, price. Конструктор должен возвращать объект в
+// котором присутствуют вышеназванные поля со значениями.
+// Каждый представитель класса Car должен обладать методом
+// run() который выводит сообщение вида : MODEL + “ ” +
+// COLOR + ” is running”.
+
+// function Car (model,color,price){
+//     this.model = model;
+//     this.color = color;
+//     this.price = price;
+// }
+// Car.prototype.run = function(){
+//     console.log(`MODEL ${this.model} Color ${this.color} is runing`);
+// }
+// let a = new Car('BMW', 'blue');
+// a.run();
+
+// 3. Создать конструктор Book, с помощью этого конструктора
+// создать массив из 8 книг (объектов). Каждая книга должна
+// представлять из себя объект, в котором есть три поля:
+// author, bookName, pageAmount.
+// Создать функцию getBiggerBook(), которая принимает
+// массив книг и возвращает ОДНУ книгу с наибольшим
+// количеством страниц
+
+// function Book (allB){
+//     this.allB = allB;
+//     console.log(allB);
+// }
+// Book.prototype.count = function (allB) {
+// console.log(Math.max(allB.pageAmount));
+// console.log(allB);
+// }
+// let a = new Book([{bookName: 'Harry Potter' ,pageAmount: 300 ,author:'I dont know'},
+// {bookName: 'learn JS' ,pageAmount: 670 ,author:'I dont know'}]);
+// a.count();
+// function Obj (name , color , price){
+//     this.name = name
+//     this.color = color
+//     this.price = price
+// }
+// Obj.prototype.showPrice = function(){
+//     console.log(`Obj ${this.name} price ${this.price}$`);
+// }
+// let firstPrice = new Obj('odf','blue',34); 
+// firstPrice.showPrice()
+
+//2-en ex
+// function Device (){
+//     this.isON = 
+// }
+// Device.prototype.switchIsOn = function (){
+//     console.log()
+// }
+// let DeviseTest = new Device(); 
+// DeviseTest.switchIsOn()
+// 'use strict';
+
+
+
+// function Animal (name, age) {
+//     // 1. this = {};    
+//     this.age = age;
+//     this.name = name;
+//     // this.toString = function () {
+//     //     return 'smth';
+//     // };
+//     // 2. return this;
+// }
+
+// Animal.prototype.run = function (where = 'itstep') {
+//     console.log(`${this.name} runs to ${where}`);
+// };
+
+// Animal.prototype.toString = function () {
+//     return this.name;
+// }
+
+// // Animal.prototype === obj.__proto__ === obj2.__proto__ === obj3.__proto__
+
+// let obj = new Animal('Sharik', 10);
+// let obj2 = new Animal('Bobik', 20);
+// let obj3 = new Animal.prototype.constructor('Sobaka', 30);
+
+// console.log(obj3.paws);
+
