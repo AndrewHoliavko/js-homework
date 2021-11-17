@@ -35,30 +35,30 @@
 
 //-----------------------es6 classes------------------------
 
-class Animal{
-    constructor(name,age){
-        this.name = name;
-        this.age = age;
-    }
-    eat () {
-        return `${this.name} eats`
-    }
-}
-const dog = new Animal('Tuzik',5);
+// class Animal{
+//     constructor(name,age){
+//         this.name = name;
+//         this.age = age;
+//     }
+//     eat () {
+//         return `${this.name} eats`
+//     }
+// }
+// const dog = new Animal('Tuzik',5);
 
-class Human extends Animal{
-    constructor(job,...args){
-        super(...args);
-        this.job = job;
-    }
-    learn (technology){
-        return `${this.name} learns ${technology}`
-    }
-    eat(){
-        const eatAsAnimal = super.eat();
-        return eatAsAnimal + 'with a fork'
-    }
-}
-const hum1 = new Human('bomj','Jhon',23);
-hum1.learn('js')
-hum1.eat()
+// class Human extends Animal{
+//     constructor(job,...args){
+//         super(...args);
+//         this.job = job;
+//     }
+//     learn (technology){
+//         return `${this.name} learns ${technology}`
+//     }
+//     eat(){
+//         const eatAsAnimal = super.eat();
+//         return eatAsAnimal + 'with a fork'
+//     }
+// }
+// const hum1 = new Human('bomj','Jhon',23);
+// hum1.learn('js')
+// hum1.eat()
